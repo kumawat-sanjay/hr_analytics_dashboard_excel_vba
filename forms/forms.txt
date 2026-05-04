@@ -1,0 +1,79 @@
+Private Sub btnAdd_Click()
+
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Sheets("Clean_Data")
+    
+    Dim lastRow As Long
+    lastRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row + 1
+    
+    ws.Cells(lastRow, GetColumnIndex(ws, "EmployeeID")).Value = txtEmpID.Value
+    ws.Cells(lastRow, GetColumnIndex(ws, "EmployeeName")).Value = txtName.Value
+    ws.Cells(lastRow, GetColumnIndex(ws, "Department")).Value = txtDept.Value
+    ws.Cells(lastRow, GetColumnIndex(ws, "Salary")).Value = txtSalary.Value
+    ws.Cells(lastRow, GetColumnIndex(ws, "TotalExperience")).Value = txtExp.Value
+    
+    MsgBox "Employee Added ?"
+
+End Sub
+
+Private Sub btnSearch_Click()
+
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Sheets("Clean_Data")
+    
+    Dim colID As Long
+    colID = GetColumnIndex(ws, "EmployeeID")
+    
+    Dim resultRow As Variant
+    resultRow = Application.Match(txtEmpID.Value, ws.Columns(colID), 0)
+    
+    If IsError(resultRow) Then
+        MsgBox "Employee Not Found"
+        Exit Sub
+    End If
+    
+    txtName.Value = ws.Cells(resultRow, GetColumnIndex(ws, "EmployeeName")).Value
+    txtDept.Value = ws.Cells(resultRow, GetColumnIndex(ws, "Department")).Value
+    txtSalary.Value = ws.Cells(resultRow, GetColumnIndex(ws, "Salary")).Value
+    txtExp.Value = ws.Cells(resultRow, GetColumnIndex(ws, "TotalExperience")).Value
+
+End Sub
+
+Private Sub btnUpdate_Click()
+
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Sheets("Clean_Data")
+    
+    Dim colID As Long
+    colID = GetColumnIndex(ws, "EmployeeID")
+    
+    Dim resultRow As Variant
+    resultRow = Application.Match(txtEmpID.Value, ws.Columns(colID), 0)
+    
+    If IsError(resultRow) Then
+        MsgBox "Employee Not Found"
+        Exit Sub
+    End If
+    
+    ws.Cells(resultRow, GetColumnIndex(ws, "EmployeeName")).Value = txtName.Value
+    ws.Cells(resultRow, GetColumnIndex(ws, "Department")).Value = txtDept.Value
+    ws.Cells(resultRow, GetColumnIndex(ws, "Salary")).Value = txtSalary.Value
+    ws.Cells(resultRow, GetColumnIndex(ws, "TotalExperience")).Value = txtExp.Value
+    
+    MsgBox "Employee Updated ?"
+
+End Sub
+
+Private Sub btnClear_Click()
+
+    txtEmpID.Value = ""
+    txtName.Value = ""
+    txtDept.Value = ""
+    txtSalary.Value = ""
+    txtExp.Value = ""
+
+End Sub
+
+Private Sub UserForm_Click()
+
+End Sub
