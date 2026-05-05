@@ -29,7 +29,6 @@ Dashboard + Visualizations + Insights
        ↓
 PDF Report Export
 
-
 ---
 
 ## 🔥 Key Features
@@ -137,10 +136,10 @@ System behavior is controlled via **Settings sheet**:
 ![Dashboard](screenshots/Dashboard_Part1.jpg)
 
 ### 🔍 Employee Search
-![Search](Search_By_EmployeeID.jpg)
+![Search](screenshots/Search_By_EmployeeID.jpg)
 
 ### 🧾 Employee Form
-![Form](Employee_Mgmt_Part1.jpg)
+![Form](screenshots/Employee_Mgmt_Part1.jpg)
 
 ---
 
