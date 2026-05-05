@@ -17,17 +17,7 @@ This project solves that by building a **complete, automated HR analytics system
 This is an **end-to-end analytics pipeline** built using Excel, VBA, and Power Query.
 
 ### 🔄 Data Flow Architecture
-Raw Data (CSV / Folder)
-       ↓
-Power Query (ETL)
-       ↓
-Cleaned_Data Sheet
-       ↓
-VBA Analytics Engine
-       ↓
-Dashboard + Visualizations + Insights
-       ↓
-PDF Report Export
+Raw Data (CSV / Folder) -> Power Query (ETL) -> Cleaned Data -> VBA Analytics Engine -> Dashboard + Insights -> PDF Export
 
 ---
 
