@@ -176,12 +176,14 @@ This solution enables HR teams to:
 
 ---
 
-## 📌 Author
 
-**Sanjay Kumawat**
+# 👨‍💻 Author
+
+## Sanjay Kumawat
+
+### Connect:
+
+* GitHub: [kumawat-sanjay](https://github.com/kumawat-sanjay)
+* LinkedIn: [kumawatsanjay](https://www.linkedin.com/in/kumawatsanjay/)
 
 ---
-
-## ⭐ If you found this useful
-
-Give it a ⭐ on GitHub and feel free to fork or contribute!
