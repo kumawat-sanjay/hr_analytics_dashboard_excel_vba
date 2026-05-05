@@ -1,153 +1,193 @@
-# HR Analytics Dashboard & Employee Management System (Excel + VBA)
+# 🚀 HR Analytics Dashboard & Employee Management System (Excel + VBA)
 
-## 🚀 Overview
+## 🧠 Problem Statement
 
-This project is an end-to-end HR Analytics and Employee Management System built using Excel, VBA, and Power Query.
+HR teams often struggle to identify **why employees leave** and **who is at risk**, especially when data is scattered and insights are manual.
 
-It simulates a real-world HR decision-making tool by combining:
-
-* Data pipeline automation
-* Analytical dashboards
-* Employee-level insights
-* Interactive UI for data management
-
-The goal is to help HR teams identify attrition risks, analyze workforce trends, and manage employee records efficiently.
+This project solves that by building a **complete, automated HR analytics system** inside Excel that:
+- Analyzes employee attrition
+- Identifies high-risk segments
+- Generates **data-driven recommendations**
+- Produces **ready-to-share PDF reports**
 
 ---
 
-## 🎯 Problem Statement
+## ⚙️ Solution Overview
 
-Organizations often struggle with:
+This is an **end-to-end analytics pipeline** built using Excel, VBA, and Power Query.
 
-* Tracking employee attrition trends
-* Identifying high-risk employees
-* Managing employee data efficiently
-* Making data-driven HR decisions
+### 🔄 Data Flow Architecture
+Raw Data (CSV / Folder)
+       ↓
+Power Query (ETL)
+       ↓
+Cleaned_Data Sheet
+       ↓
+VBA Analytics Engine
+       ↓
+Dashboard + Visualizations + Insights
+       ↓
+PDF Report Export
 
-This project solves these problems by building a centralized analytics and management system within Excel.
 
 ---
 
 ## 🔥 Key Features
 
 ### 📊 Analytics Dashboard
+- Total Employees, Attrition Count & Rate
+- Department-wise Attrition Analysis
+- Salary-based Attrition Insights
+- Experience-based Risk Analysis
 
-* Total Employees, Attrition Count & Rate
-* Department-wise Attrition Analysis
-* Salary-based Attrition Insights
-* Experience-based Risk Analysis
+---
 
 ### 🔍 Employee Search System
-
-* Instant employee lookup using Employee ID
-* Displays salary, department, attrition status, and risk score
-* Optimized using VBA `MATCH` for fast retrieval
-
-### 🧠 Risk Scoring Engine
-
-Calculates employee risk based on:
-
-* Overtime
-* Job Satisfaction
-* Salary level
-* Promotion gap
-
-### 🧾 Employee Management Form (UserForm)
-
-* Add new employees
-* Search existing employees
-* Update employee records
-* Clean and interactive UI
-
-### ⚡ Automation Pipeline
-
-* One-click execution of full analytics pipeline
-* Power Query integration for data ingestion
-* Automatic dashboard refresh
+- Instant lookup using Employee ID
+- Displays:
+  - Name
+  - Department
+  - Salary
+  - Attrition Status
+  - Risk Score
 
 ---
 
-## 🏗️ System Architecture
+### 🧠 Data-Driven Insights Engine
+Automatically generates insights such as:
+- High-risk departments (compared to company average)
+- Salary-driven attrition risk
+- Early-career employee churn
+- Promotion gap impact
+- Overtime impact on attrition
 
-1. **Data Layer**
-
-   * Raw employee data imported via Power Query
-
-2. **Processing Layer**
-
-   * VBA modules for cleaning, validation, and transformations
-
-3. **Analytics Layer**
-
-   * KPI calculations and risk scoring logic
-
-4. **Presentation Layer**
-
-   * Excel dashboard + charts + UI formatting
-
-5. **Interaction Layer**
-
-   * Employee search system
-   * UserForm-based CRUD operations
+Each insight includes:
+- Priority (HIGH / MEDIUM / LOW)
+- Business impact
+- Actionable recommendation
 
 ---
 
-## 🛠️ Tech Stack
+### ⚠️ Risk Scoring Engine
+Employee-level risk score based on:
+- Overtime
+- Job Satisfaction
+- Salary threshold
+- Promotion delay
 
-* Excel (Advanced)
-* VBA (Macros, UserForms, Automation)
-* Power Query (ETL pipeline)
+---
+
+### 🧾 Employee Management System (UserForm)
+- Add new employees
+- Search employees
+- Update records
+- Clean and interactive UI
+
+---
+
+### ⚡ Automation
+- One-click pipeline execution
+- Power Query data ingestion
+- Auto dashboard refresh
+- Multi-sheet PDF export (Dashboard + Insights)
+
+---
+
+### 📄 PDF Report Export
+- Exports **Dashboard + Insights** into a single report
+- Automatically saves to `/Export` folder
+- Timestamp-based file naming
+
+
+---
+
+## ⚙️ Configuration (Settings Driven)
+
+System behavior is controlled via **Settings sheet**:
+
+| Parameter | Description |
+|----------|------------|
+| Salary_Threshold | Defines low salary group |
+| Experience_Threshold | Defines early career |
+| Promotion_Years | Years before promotion risk |
+| Attrition_Risk_Multiplier | Threshold for high risk |
+
+👉 No code change required — fully configurable
+
+---
+
+## ▶️ How to Run
+
+1. Open the `.xlsm` file
+2. Enable macros
+3. Click **Run Analysis**
+4. Explore:
+   - Dashboard
+   - Insights
+5. Use:
+   - Employee Search
+   - Employee Form
+6. Click **Export** for PDF report output
 
 ---
 
 ## 📸 Screenshots
 
 ### 📊 Dashboard
-
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Dashboard_Part1.jpg)
 
 ### 🔍 Employee Search
-
-![Search](screenshots/search.png)
+![Search](Search_By_EmployeeID.jpg)
 
 ### 🧾 Employee Form
-
-![Form](screenshots/form.png)
+![Form](Employee_Mgmt_Part1.jpg)
 
 ---
 
-## ⚙️ How to Run
+## 🛠️ Tech Stack
 
-1. Download the `.xlsm` file
-2. Enable macros in Excel
-3. Click **Run Analysis** button on the dashboard
-4. Use:
-
-   * Employee Search for lookup
-   * Employee Form for data management
+- **Excel (Advanced)**
+- **VBA (Automation + UI + Logic)**
+- **Power Query (ETL)**
 
 ---
 
 ## 🎯 Key Highlights
 
-* Built a complete data pipeline inside Excel
-* Optimized search using VBA (`MATCH` vs loops)
-* Designed interactive UI using UserForms
-* Implemented employee risk scoring model
-* Created a mini application using Excel + VBA
+- Built a **complete analytics pipeline inside Excel**
+- Implemented **data-driven insights engine**
+- Designed **configurable system using Settings sheet**
+- Developed **risk scoring model for employees**
+- Created **interactive UI using VBA UserForms**
+- Automated **multi-sheet PDF reporting**
 
 ---
 
-## 📌 Future Enhancements
+## 🚀 Future Enhancements
 
-* Department-based filters
-* Interactive charts
-* Export reports to PDF
-* High-risk employee alerts
-* Role-based login system
+- Drill-down dashboards
+- Email automation for reports
+- High-risk employee alerts
+- Migration to Power BI
 
 ---
 
-## 👨‍💻 Author
+## 💼 Business Impact
 
-Sanjay Kumawat
+This solution enables HR teams to:
+- Identify **attrition drivers quickly**
+- Take **proactive retention actions**
+- Reduce manual reporting effort
+- Make **data-driven HR decisions**
+
+---
+
+## 📌 Author
+
+**Sanjay Kumawat**
+
+---
+
+## ⭐ If you found this useful
+
+Give it a ⭐ on GitHub and feel free to fork or contribute!
